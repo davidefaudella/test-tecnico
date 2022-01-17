@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/index.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  <body>
+    
+
+    <div
+      class="min-w-screen min-h-screen bg-slate-600 flex items-center justify-center px-5 py-5"
+    >
+      <div
+        class="bg-gray-100 text-gray-500 rounded-xl shadow-2xl w-full overflow-hidden"
+        style="max-width: 1000px"
+      >
+        <div class="md:flex w-full h-full">
+          <div class="md:block md:w-1/2 h-full flex flex-col bg-slate-800 py-10 px-10">
+            <button
+              onClick="getInput(this)"
+              class="block w-full h-20 max-w-xs mx-auto mb-10 bg-orange-500 hover:bg-orange-700 focus:bg-orange-700 text-white rounded-lg px-3 py-3 font-semibold"
+            >INPUT 1</button>
+            <button
+              onclick="getInput(this)"
+              class="block w-full h-20 max-w-xs mx-auto mb-10 bg-orange-500 hover:bg-orange-700 focus:bg-orange-700 text-white rounded-lg px-3 py-3 font-semibold"
+            >INPUT 2</button>
+            <button
+              onclick="getInput(this)"
+              class="block w-full h-20 max-w-xs mx-auto bg-orange-500 hover:bg-orange-700 focus:bg-orange-700 text-white rounded-lg px-3 py-3 font-semibold"
+            >INPUT 3</button>
+          </div>
+          <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
+            <div class="text-center mb-8">
+              <h1 id="title" class="font-bold text-3xl text-gray-900"></h1>
+            </div>
+            <div>
+              <div class="flex -mx-3">
+                <div class="w-full px-3 mb-8">
+                  <div class="flex">
+                    <div
+                      class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                    ></div>
+                    <div
+                    id="receipt"
+                    class="w-full hidden overflow-auto h-40 -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 bg-gray-200 outline-none ">
+                    </div>
+                    <textarea
+                      id="input-area"
+                      placeholder="Write here your input text or click a button on the left"
+                      class="w-full h-40 -ml-10 pl-3 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                    /></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="flex -mx-3">
+                <div class="w-full px-3 mb-3">
+                  <button
+                    id="print-button"
+                    onclick="printReceipt(this)"
+                    class="block w-full max-w-xs mx-auto bg-orange-500 hover:bg-orange-700 focus:bg-orange-700 text-white rounded-lg px-3 py-3 font-semibold"
+                  ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <script src="/dist/index.min.js"></script>
+  </body>
+</html>
